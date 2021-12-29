@@ -10,10 +10,12 @@ const Usuario = db_1.default.define('Usuario', {
         type: sequelize_1.DataTypes.STRING
     },
     email: {
-        type: sequelize_1.DataTypes.STRING
+        type: sequelize_1.DataTypes.STRING,
+        unique: true
     },
     estado: {
-        type: sequelize_1.DataTypes.BOOLEAN
+        type: sequelize_1.DataTypes.BOOLEAN,
+        defaultValue: true
     }
 });
 exports.default = Usuario;
